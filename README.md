@@ -175,15 +175,11 @@ Output program adalah angka dalam array sebelum dan setelah diurutkan. Sebelum d
 ### Analisis Kompleksitas:
 Waktu Kompleksitas:
 
-Iterasi luar dalam fungsi selection_sort berjalan sebanyak (n - 1) kali, karena elemen terakhir sudah pasti terurut setelah iterasi sebelumnya.
-Di dalam iterasi luar, terdapat iterasi dalam yang berjalan sebanyak (n - i) kali, di mana i adalah indeks dari iterasi luar. Hal ini karena setiap iterasi luar akan memastikan elemen terkecil diposisikan pada indeks yang tepat.
-Setiap iterasi dalam memiliki kompleksitas waktu O(n) karena melakukan perbandingan pada setiap elemen.
-Sehingga, waktu kompleksitas untuk algoritma Selection Sort adalah O(n^2), di mana n adalah jumlah elemen dalam array.
+Iterasi luar pada fungsi selection_sort berjalan sebanyak (n - 1) kali karena elemen terakhir dianggap sudah terurut setelah iterasi sebelumnya. Di dalam iterasi luar, terdapat iterasi dalam yang berjalan sebanyak (n - i) kali, dengan i sebagai indeks iterasi luar. Hal ini disebabkan oleh kebutuhan untuk menempatkan elemen terkecil pada posisi yang benar setiap iterasi. Sebagai hasilnya, waktu kompleksitas untuk algoritma Selection Sort adalah O(n^2), di mana n adalah jumlah elemen dalam array.
 
 Ruang Kompleksitas:
 
-Algoritma ini menggunakan penyimpanan sementara dalam bentuk variabel 'min' dan 'temp'.
-Karena tidak ada alokasi memori tambahan yang bergantung pada ukuran masukan (array), ruang kompleksitasnya adalah O(1), yaitu konstan.
+Algoritma ini menggunakan penyimpanan sementara dalam bentuk variabel 'min' dan 'temp'. Tidak ada alokasi memori tambahan yang tergantung pada ukuran masukan (array), sehingga ruang kompleksitasnya adalah O(1), yang berarti konstan.
 
 ### 2. Pak RT memiliki 10 warga dengan nama: siti, situ, sana, ana, ani, caca, cici, dida, dodo, dan dadi. Supaya mudah dalam melakukan pencarian, Pak RT akan mengurutkan namanama tersebut sesuai dengan alfabet. Buatlah program untuk membantu Pak RT dengan menggunakan algoritma Bubble Sort!
 ```C++
@@ -301,15 +297,11 @@ Hasil output program menampilkan urutan karakter sebelum pengurutan, urutan sete
 ### Analisis Kompleksitas:
 Waktu Kompleksitas:
 
-Algoritma Bubble Sort Ascending dan Bubble Sort Descending keduanya memiliki struktur yang sama dengan Bubble Sort pada umumnya.
-Iterasi luar dalam kedua fungsi berjalan sebanyak (n - 1) kali, karena setiap iterasi luar memastikan bahwa setidaknya satu elemen sudah berada pada posisi yang tepat.
-Di dalam iterasi luar, terdapat iterasi dalam yang berjalan sebanyak (n - i - 1) kali, di mana i adalah indeks dari iterasi luar. Hal ini karena setiap iterasi luar akan menempatkan elemen terbesar (pada Bubble Sort Ascending) atau terkecil (pada Bubble Sort Descending) di posisi yang tepat di bagian belakang array.
-Setiap iterasi dalam memiliki kompleksitas waktu O(n) karena melakukan perbandingan pada setiap elemen.
-Sehingga, waktu kompleksitas untuk kedua algoritma Bubble Sort Ascending dan Bubble Sort Descending adalah O(n^2), di mana n adalah jumlah elemen dalam array.
+Iterasi luar pada fungsi bubbleSort berjalan sebanyak (n - 1) kali, dimana setiap iterasi luar memastikan bahwa minimal satu elemen sudah berada pada posisi yang benar. Di dalam iterasi luar, terdapat iterasi dalam yang berjalan sebanyak (n - i - 1) kali, dengan i sebagai indeks dari iterasi luar. Hal ini dikarenakan setiap iterasi luar akan menempatkan elemen terbesar pada posisi yang benar di ujung array. Setiap iterasi dalam memerlukan waktu O(n) karena melakukan perbandingan pada setiap elemen. Oleh karena itu, waktu kompleksitas untuk algoritma Bubble Sort adalah O(n^2), dimana n adalah jumlah elemen dalam array.
 
 Ruang Kompleksitas:
 
-Karena tidak ada alokasi memori tambahan yang bergantung pada ukuran masukan (array), ruang kompleksitas kedua algoritma adalah O(1), yaitu konstan.
+Algoritma ini menggunakan variabel 'temp' sebagai penyimpanan sementara. Tidak ada alokasi memori tambahan yang bergantung pada ukuran masukan (array), sehingga ruang kompleksitasnya adalah O(1), yang berarti konstan.
 
 ## Kesimpulan
 Algoritma Selection Sort digunakan untuk mengurutkan array bilangan float dengan cara membandingkan setiap elemen dan menukar mereka jika diperlukan. Waktu eksekusi algoritma ini tergantung pada jumlah elemen dalam array. Sebagai contoh, array float berhasil diurutkan dari yang terkecil hingga terbesar menggunakan Selection Sort. Di sisi lain, Bubble Sort merupakan algoritma sorting sederhana yang membandingkan dan menukar pasangan elemen yang berdekatan secara berulang. Meskipun efektif untuk mengurutkan array string secara alfabetis, Bubble Sort kurang efisien terutama pada data yang besar. Dalam kasus ketiga, Bubble Sort digunakan untuk mengurutkan karakter baik dalam urutan naik maupun turun, menunjukkan fleksibilitas algoritma ini dalam mengatasi berbagai jenis data dengan sedikit modifikasi pada implementasinya.
