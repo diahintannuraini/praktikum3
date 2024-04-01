@@ -74,9 +74,9 @@ int main() {
 
 ### Output:
 ![Guided 1](https://github.com/suxeno/Struktur-Data-Assignment/assets/162097079/0d678fe6-11e1-41c7-8cf3-376d5cf3ca83)
-
  ### Interpretasi : 
  Kodingan di atas menggunakan algoritma Bubble Sort untuk mengurutkan array bilangan double secara meningkat. Algoritma ini membandingkan pasangan elemen dalam array dan menukar posisi jika diperlukan. Iterasi terus dilakukan hingga tidak ada lagi pertukaran posisi yang dibutuhkan, menandakan bahwa array sudah terurut. Fungsi 'print_array' digunakan untuk mencetak array sebelum dan sesudah pengurutan. Dalam 'main', array diinisialisasi dan dicetak sebelum dan sesudah pengurutan dilakukan.
+
 ### 2.Mengurutkan karakter secara descending (dari terbesar hingga terkecil) menggunakan Algoritma Insertion Sort
 ```C++
 #include <iostream>
